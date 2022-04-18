@@ -25,20 +25,12 @@ end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
---[[
-put .clangd in linux kernel folder
-$ cat .clangd
-CompileFlags:
-  Remove: -mabi=lp64
-]]
 nvim_lsp.clangd.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
 	cmd = {
 		"clangd",
 		"--background-index",
-		"--suggest-missing-includes",
-		'--query-driver="/opt/tools/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-gcc"'
 	},
 	filetypes = {"c", "cpp", "objc", "objcpp"},
 }
