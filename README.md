@@ -7,8 +7,8 @@ This repo is based on Allaman's [NeoVim Configuration](https://github.com/allama
 ## Prerequisite
 
 1. Install NeoVim. Refer to [NeoVim Installation Wiki](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-2. Install clangd.
-3. Have access to github.com.
+2. Install language servers (clangd, bashls, etc.). Refer to [server_configurations.md](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md) on how to install language servers.
+3. Have access to github.com. Proxy may need to be configured if sitting in internal network.
 
 ## Install
 

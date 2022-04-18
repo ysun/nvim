@@ -42,3 +42,28 @@ nvim_lsp.clangd.setup {
 	},
 	filetypes = {"c", "cpp", "objc", "objcpp"},
 }
+
+nvim_lsp.dockerls.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = {
+		"docker-langserver", "--stdio"
+	},
+	filetypes = { "dockerfile" },
+	root_dir = nvim_lsp.util.root_pattern("Dockerfile"),
+	single_file_support = true,
+}
+
+nvim_lsp.bashls.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = {
+		"bash-language-server", "start"
+	},
+	cmd_env = {
+		GLOB_PATTERN = "*@(.sh|.inc|.bash|.command)"
+	},
+	filetypes = { "sh" },
+	root_dir = nvim_lsp.util.find_git_ancestor,
+	single_file_support = true,
+}
