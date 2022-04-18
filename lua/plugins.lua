@@ -59,6 +59,14 @@ use({
 })
 
 use({
+        "nvim-treesitter/nvim-treesitter",
+        config = get_config("treesitter"),
+        run = ":TSUpdate",
+})
+
+use("nvim-treesitter/nvim-treesitter-textobjects")
+
+use({
         "hrsh7th/nvim-cmp",
         requires = {
 		{ "onsails/lspkind-nvim" },
