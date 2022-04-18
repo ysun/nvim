@@ -1,6 +1,6 @@
 require('telescope').setup({
   defaults = {
-    layout_strategy = 'vertical',    
+    layout_strategy = 'vertical',
     layout_config = {
       height = 0.95,
       prompt_position = 'bottom',
@@ -9,6 +9,7 @@ require('telescope').setup({
       preview_height = 0.6,
       scroll_speed = 1,
     },
+    file_ignore_patterns = { ".cache/", "%.o", "%.ko", "%.tar.gz" },
     mappings = {
       i = {
         ["<C-Up>"] = require "telescope.actions".preview_scrolling_up,
@@ -25,9 +26,15 @@ require('telescope').setup({
 local map = vim.api.nvim_set_keymap
 default_options = {noremap = true, silent = true}
 
+_G.my_project_files = function()
+	local ok = pcall(require"telescope.builtin".git_files, default_options)
+	if not ok then require"telescope.builtin".find_files(default_options) end
+end
+
 map("n", "fg", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", default_options)
 map("n", "fr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", default_options)
-map("n", "ff", "<cmd>Telescope find_files<CR>", default_options)
+map("n", "ff", "<cmd>call v:lua.my_project_files()<CR>", default_options)
+map("n", "gf", "<cmd>Telescope git_files<CR>", default_options)
 map("n", "gg", "<cmd>Telescope live_grep<CR>", default_options)
 map("n", "fb", "<cmd>Telescope buffers<CR>", default_options)
 map("n", ";;", "<cmd>Telescope help_tags<CR>", default_options)
