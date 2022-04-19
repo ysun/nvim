@@ -50,6 +50,8 @@ use({
 	config = get_config("telescope"),
 })
 
+use({ "nvim-telescope/telescope-file-browser.nvim" })
+
 use {
     'kyazdani42/nvim-tree.lua',
     requires = {

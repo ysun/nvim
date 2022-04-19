@@ -1,4 +1,8 @@
-require('telescope').setup({
+local telescope = require("telescope")
+
+telescope.load_extension "file_browser"
+
+telescope.setup({
   defaults = {
     layout_strategy = 'vertical',
     layout_config = {
