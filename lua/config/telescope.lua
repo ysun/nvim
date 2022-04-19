@@ -32,10 +32,6 @@ _G.my_project_files = function()
 end
 
 map("n", "fg", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", default_options)
-map("n", "fr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", default_options)
+--map("n", "fr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", default_options)
+map("n", "<C-\\>s", "<cmd>Telescope lsp_references<CR>", default_options)
 map("n", "ff", "<cmd>call v:lua.my_project_files()<CR>", default_options)
-map("n", "gf", "<cmd>Telescope git_files<CR>", default_options)
-map("n", "gg", "<cmd>Telescope live_grep<CR>", default_options)
-map("n", "fb", "<cmd>Telescope buffers<CR>", default_options)
-map("n", ";;", "<cmd>Telescope help_tags<CR>", default_options)
-

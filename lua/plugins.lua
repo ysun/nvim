@@ -79,6 +79,8 @@ use({
         config = get_config("cmp"),
 })
 
+use({ "folke/which-key.nvim", config = get_config("which") })
+
 if packer_bootstrap then
 	require("packer").sync()
 end
