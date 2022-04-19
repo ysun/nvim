@@ -29,10 +29,10 @@ map("n", "<S-TAB>", ":bprevious<CR>", default_options)
 map("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", default_options)
 
 -- Resizing panes
-map("n", "<Left>", ":vertical resize +1<CR>", default_options)
-map("n", "<Right>", ":vertical resize -1<CR>", default_options)
-map("n", "<Up>", ":resize -1<CR>", default_options)
-map("n", "<Down>", ":resize +1<CR>", default_options)
+map("n", "<C-Left>", ":vertical resize +1<CR>", default_options)
+map("n", "<C-Right>", ":vertical resize -1<CR>", default_options)
+map("n", "<C-Up>", ":resize -1<CR>", default_options)
+map("n", "<C-Down>", ":resize +1<CR>", default_options)
 
 -- Autocorrect spelling from previous error
 map("i", "<c-f>", "<c-g>u<Esc>[s1z=`]a<c-g>u", default_options)
