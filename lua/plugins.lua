@@ -101,6 +101,12 @@ use({
 	config = get_config("diffview"),
 })
 
+use({
+	"akinsho/nvim-toggleterm.lua",
+	keys = { "<C-n>", "<leader>fl", "<leader>gt" },
+	config = get_config("toggleterm"),
+})
+
 use("ironhouzi/starlite-nvim")
 
 use({ "folke/which-key.nvim", config = get_config("which") })
