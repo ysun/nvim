@@ -9,7 +9,7 @@ require('telescope').setup({
       preview_height = 0.6,
       scroll_speed = 1,
     },
-    file_ignore_patterns = { ".cache/", "%.o", "%.ko", "%.tar.gz" },
+    file_ignore_patterns = { ".cache/", "%.o", "%.so", "%.a", "%.ko", "%.tar.gz" },
     mappings = {
       i = {
         ["<C-Up>"] = require "telescope.actions".preview_scrolling_up,
