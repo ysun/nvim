@@ -50,6 +50,14 @@ use({
 	config = get_config("telescope"),
 })
 
+use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    config = get_config("nvim-tree")
+}
+
 use({ 
 	"nvim-lualine/lualine.nvim",
 	config = get_config("lualine"),
