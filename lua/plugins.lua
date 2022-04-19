@@ -80,6 +80,8 @@ use({
 	config = get_config("cmp"),
 })
 
+use("ironhouzi/starlite-nvim")
+
 use({ "folke/which-key.nvim", config = get_config("which") })
 
 if packer_bootstrap then
