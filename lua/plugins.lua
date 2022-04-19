@@ -45,38 +45,39 @@ use {'folke/tokyonight.nvim', config = get_config("tokyonight")}
 use { "neovim/nvim-lspconfig", config = get_config("lsp") }
 
 use({
-        "nvim-telescope/telescope.nvim",
-        requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } },
-        config = get_config("telescope"),
+	"nvim-telescope/telescope.nvim",
+	requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } },
+	config = get_config("telescope"),
 })
 
--- use { "hoob3rt/lualine.nvim", config = get_config("lualine") }
 use({ 
-        "nvim-lualine/lualine.nvim",
-        config = get_config("lualine"),
-        event = "VimEnter",  
-        requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	"nvim-lualine/lualine.nvim",
+	config = get_config("lualine"),
+	event = "VimEnter",
+	requires = { "kyazdani42/nvim-web-devicons", opt = true },
 })
 
 use({
-        "nvim-treesitter/nvim-treesitter",
-        config = get_config("treesitter"),
-        run = ":TSUpdate",
+	"nvim-treesitter/nvim-treesitter",
+	config = get_config("treesitter"),
+	after = "nvim-lspconfig",
+	run = ":TSUpdate",
 })
 
-use("nvim-treesitter/nvim-treesitter-textobjects")
+use { "nvim-treesitter/nvim-treesitter-textobjects", after = "nvim-treesitter" }
 
 use({
-        "hrsh7th/nvim-cmp",
-        requires = {
+	"hrsh7th/nvim-cmp",
+	requires = {
 		{ "onsails/lspkind-nvim" },
-                { "hrsh7th/cmp-nvim-lsp" },
-                { "hrsh7th/cmp-buffer" },
-                { "hrsh7th/cmp-path" },
-                { "hrsh7th/cmp-cmdline" },
-                { "f3fora/cmp-spell", { "hrsh7th/cmp-calc" }, { "lukas-reineke/cmp-rg" } },
-        },
-        config = get_config("cmp"),
+		{ "hrsh7th/cmp-nvim-lsp" },
+		{ "hrsh7th/cmp-buffer" },
+		{ "hrsh7th/cmp-path" },
+		{ "hrsh7th/cmp-cmdline" },
+		{ "f3fora/cmp-spell", { "hrsh7th/cmp-calc" }, { "lukas-reineke/cmp-rg" } },
+	},
+	after = "nvim-lspconfig",
+	config = get_config("cmp"),
 })
 
 use({ "folke/which-key.nvim", config = get_config("which") })
