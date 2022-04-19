@@ -90,6 +90,17 @@ use({
 	config = get_config("cmp"),
 })
 
+use({
+	"sindrets/diffview.nvim",
+	cmd = {
+		"DiffviewOpen",
+		"DiffviewClose",
+		"DiffviewToggleFiles",
+		"DiffviewFocusFiles",
+	},
+	config = get_config("diffview"),
+})
+
 use("ironhouzi/starlite-nvim")
 
 use({ "folke/which-key.nvim", config = get_config("which") })
