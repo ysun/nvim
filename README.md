@@ -41,14 +41,14 @@ CompileFlags:
 | n    | <C-]>            | LSP go to definition                                 | 
 | n    | <C-\>s           | Telescope lsp find symbol references                 |
 | n    | K                | LSP hover on current word                            |
-| n    | <ESC>            | Cancel search highlight                              |
-| n    | <TAB>            | Goto next buffer                                     |
-| n    | <C-Left>         | Window vertical resize +1                            |
-| n    | <C-Right>        | Window vertical resize -1                            |
-| n    | <C-Up>           | Window resize -1                                     |
-| n    | <C-Down>         | Window resize +1                                     |
-| n    | <C-w>            | Switch window                                        |
-| n    | <C-n>            | Start a terminal                                     |
-| t    | <ESC>            | Back to normal mode in terminal                      |
+| n    | \<ESC\>          | Cancel search highlight                              |
+| n    | \<TAB\>          | Goto next buffer                                     |
+| n    | \<C-Left\>       | Window vertical resize +1                            |
+| n    | \<C-Right\>      | Window vertical resize -1                            |
+| n    | \<C-Up\>         | Window resize -1                                     |
+| n    | \<C-Down\>       | Window resize +1                                     |
+| n    | \<C-w\>          | Switch window                                        |
+| n    | \<C-n\>          | Start a terminal                                     |
+| t    | \<ESC\>          | Back to normal mode in terminal                      |
 
 
