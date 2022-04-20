@@ -33,13 +33,13 @@ CompileFlags:
 
 | Mode | Key              | Binding                                              |
 | ---- | ---------------- | ---------------------------------------------------- |
-| n    | space            | Leader key                                           |
+| n    | \<SPACE\>        | Leader key                                           |
 | n    | tt               | Toggle Nvim-Tree on left side                        |
 | n    | ts               | Toggle SymbolsOutline on right side                  |
 | n    | ff               | Telescope find file                                  |
 | n    | fg               | Telescope lsp dynamic workspace symbols              |
-| n    | <C-]>            | LSP go to definition                                 | 
-| n    | <C-\>s           | Telescope lsp find symbol references                 |
+| n    | \<C-\]\>         | LSP go to definition                                 | 
+| n    | \<C-\>s          | Telescope lsp find symbol references                 |
 | n    | K                | LSP hover on current word                            |
 | n    | \<ESC\>          | Cancel search highlight                              |
 | n    | \<TAB\>          | Goto next buffer                                     |
