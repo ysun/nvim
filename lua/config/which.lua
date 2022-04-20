@@ -116,9 +116,9 @@ wk.register({
 			"Find File",
 		},
 		l = { "<cmd>Lf<cr>", "Open LF" },
-		p = { "<cmd>NvimTreeToggle<cr>", "Toogle Tree" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
 		s = { "<cmd>w<cr>", "Save Buffer" },
+		t = { "<cmd>NvimTreeToggle<cr>", "Toogle Tree" },
 		T = { "<cmd>NvimTreeFindFile<CR>", "Find in Tree" },
 		z = { "<cmd>Telescope zoxide list<CR>", "Zoxide" },
 	},
@@ -188,6 +188,7 @@ wk.register({
 	m = {
 		name = "Misc",
 		p = { "<cmd>PackerSync<cr>", "PackerSync" },
+		s = { "<cmd>SymbolsOutline<cr>", "Toggle SymbolsOutline" },
 	},
 	s = {
 		name = "Search",

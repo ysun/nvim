@@ -91,6 +91,12 @@ use({
 })
 
 use({
+	"simrat39/symbols-outline.nvim",
+--	cmd = { "SymbolsOutline" },
+	config = get_config("symbols"),
+})
+
+use({
 	"sindrets/diffview.nvim",
 	cmd = {
 		"DiffviewOpen",
