@@ -111,6 +111,11 @@ use("ironhouzi/starlite-nvim")
 
 use({ "folke/which-key.nvim", config = get_config("which") })
 
+use({
+	"https://gitlab.com/yorickpeterse/nvim-window.git",
+	config = get_config("nvim-window"),
+})
+
 if packer_bootstrap then
 	require("packer").sync()
 end
