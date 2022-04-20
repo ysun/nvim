@@ -159,3 +159,8 @@ require("nvim-tree").setup({
 		},
 	},
 })
+
+local map = vim.api.nvim_set_keymap
+default_options = {noremap = true, silent = true}
+
+map("n", "tt", "<cmd>NvimTreeToggle<cr>", default_options)
