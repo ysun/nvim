@@ -2,6 +2,10 @@ local map = vim.api.nvim_set_keymap
 default_options = {noremap = true, silent = true}
 expr_options = {noremap = true, expr = true, silent = true}
 
+-- hack for microsoft terminal
+vim.cmd("command! Vblock normal! <C-v>")
+map("n", "tv", ":Vblock<CR>", default_options)
+
 -- map the leader key
 map("n", "<Space>", "<NOP>", default_options)
 map("n", "<Up>", "<NOP>", default_options)
