@@ -107,7 +107,7 @@ require("nvim-tree").setup({
 	},
 	filters = {
 		dotfiles = true,
-		custom = { ".o$", ".ko$", ".a$", ".mod$", ".gitignore$", "modules.order"},
+		custom = { "\\.o$", "\\.ko$", "\\.a$", "\\.mod$", "^\\.git", "^\\.gitignore$", "^modules.order$"},
 	},
 	view = {
 		-- show line numbers in tree disabled
