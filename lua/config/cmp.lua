@@ -43,11 +43,9 @@ cmp.setup {
     ["<CR>"] = cmp.mapping {
       i = cmp.mapping.confirm { select = true },
     },
-    ["<Right>"] = cmp.mapping {
+    ["<Tab>"] = cmp.mapping {
       i = cmp.mapping.confirm { select = true },
     },
-    ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
-    ["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "s" }),
     ["<C-e>"] = cmp.mapping.abort(),
     ["<Up>"] = cmp.mapping(cmp.mapping.select_prev_item { behavior = cmp.SelectBehavior.Insert }, { "i" }),
     ["<Down>"] = cmp.mapping(cmp.mapping.select_next_item { behavior = cmp.SelectBehavior.Insert }, { "i" }),
