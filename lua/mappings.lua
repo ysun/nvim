@@ -8,10 +8,10 @@ map("n", "tv", ":Vblock<CR>", default_options)
 
 -- map the leader key
 map("n", "<Space>", "<NOP>", default_options)
-map("n", "<Up>", "<NOP>", default_options)
-map("n", "<Down>", "<NOP>", default_options)
-map("n", "<Left>", "<NOP>", default_options)
-map("n", "<Right>", "<NOP>", default_options)
+--map("n", "<Up>", "<NOP>", default_options)
+--map("n", "<Down>", "<NOP>", default_options)
+--map("n", "<Left>", "<NOP>", default_options)
+--map("n", "<Right>", "<NOP>", default_options)
 vim.g.mapleader = " "
 
 -- center search results
