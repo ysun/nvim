@@ -25,6 +25,11 @@ nvim_lsp.clangd.setup {
 	filetypes = {"c", "cpp", "objc", "objcpp"},
 }
 
+nvim_lsp.rust_analyzer.setup {
+	capabilities = capabilities,
+	on_attach = on_attach,
+}
+
 nvim_lsp.dockerls.setup {
 	capabilities = capabilities,
 	on_attach = on_attach,
