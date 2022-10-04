@@ -23,6 +23,7 @@ require("tokyonight").setup({
   --- fucntion will be called with a ColorScheme table
   ---@param colors ColorScheme
   on_colors = function(colors)
+	colors.border = colors.orange
 	colors.hint = colors.orange
 	colors.error = "#ff0000"
 	colors.bg_dark = "#000000"
