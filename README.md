@@ -7,14 +7,18 @@ This repo is based on Allaman's [NeoVim Configuration](https://github.com/allama
 ## Prerequisite
 
 1. Install NeoVim. Refer to [NeoVim Installation Wiki](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-2. Install language servers (clangd, bashls, etc.). Refer to [server_configurations.md](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md) on how to install language servers.
-3. Have access to github.com. Proxy may need to be configured if sitting in internal network.
+2. Have access to github.com. Proxy may need to be configured if sitting in internal network.
 
 ## Install
 
 1. Clone this repo to ~/.config/nvim
 2. Launch 'nvim'. This will download all the necessary plugins automatically.
 3. Quit nvim, and relaunch nvim. That's it.
+
+## Post-Install
+
+1. Install language servers (clangd, bashls, etc.). Refer to [server_configurations.md](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md) on how to install language servers.
+2. Install Nerd font
 
 ## Generate compile_commands.json for Linux Kernel
 
@@ -39,7 +43,7 @@ CompileFlags:
 | n    | ff               | Telescope find file                                  |
 | n    | fg               | Telescope lsp dynamic workspace symbols              |
 | n    | \<C-\]\>         | LSP go to definition                                 | 
-| n    | \<C-\>s          | Telescope lsp find symbol references                 |
+| n    | \<C-\\\>s        | Telescope lsp find symbol references                 |
 | n    | K                | LSP hover on current word                            |
 | n    | \<ESC\>          | Cancel search highlight                              |
 | n    | \<TAB\>          | Goto next buffer                                     |
