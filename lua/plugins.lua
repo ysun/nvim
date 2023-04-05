@@ -122,6 +122,7 @@ use({
 	config = get_config("nvim-window"),
 })
 
+use({ "tpope/vim-unimpaired" })
 use({ "tpope/vim-fugitive" })
 
 if packer_bootstrap then
