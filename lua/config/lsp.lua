@@ -20,6 +20,7 @@ nvim_lsp.clangd.setup {
 	on_attach = on_attach,
 	cmd = {
 		"clangd",
+		"--header-insertion=never",
 		"--background-index",
 	},
 	filetypes = {"c", "cpp", "objc", "objcpp"},
