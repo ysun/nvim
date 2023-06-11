@@ -37,5 +37,5 @@ end
 
 map("n", "fg", "<cmd>Telescope lsp_dynamic_workspace_symbols<CR>", default_options)
 --map("n", "fr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", default_options)
-map("n", "<C-\\>s", "<cmd>Telescope lsp_references<CR>", default_options)
+map("n", "<C-j>s", "<cmd>Telescope lsp_references<CR>", default_options)
 map("n", "ff", "<cmd>call v:lua.my_project_files()<CR>", default_options)

@@ -109,7 +109,7 @@ use({
 
 use({
 	"akinsho/nvim-toggleterm.lua",
-	keys = { "<C-n>", "<leader>fl", "<leader>gt" },
+--	keys = { "<C-n>", "<leader>fl", "<leader>gt" },
 	config = get_config("toggleterm"),
 })
 
@@ -128,3 +128,22 @@ use({ "tpope/vim-fugitive" })
 if packer_bootstrap then
 	require("packer").sync()
 end
+
+use({
+  "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup()
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+})
+
+use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+
+-- These optional plugins should be loaded directly because of a bug in Packer lazy loading
+use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
+use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
+use 'romgrk/barbar.nvim'

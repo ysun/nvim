@@ -30,8 +30,8 @@ map("v", ">", ">gv", default_options)
 map("v", "p", "\"_dP", default_options)
 
 -- Tab switch buffer
-map("n", "<TAB>", ":bnext<CR>", default_options)
-map("n", "<S-TAB>", ":bprevious<CR>", default_options)
+map("n", "<c-n>", ":bnext<CR>", default_options)
+map("n", "<c-p>", ":bprevious<CR>", default_options)
 
 -- Cancel search highlighting with ESC
 map("n", "<ESC>", ":nohlsearch<Bar>:echo<CR>", default_options)
