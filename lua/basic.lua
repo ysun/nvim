@@ -44,8 +44,8 @@ vim.bo.autoread = true
 -- vim.o.whichwrap = "<,>,[,]"
 -- 允许隐藏被修改过的 buffer
 vim.o.hidden = true
--- 开启鼠标支持
-vim.o.mouse = "a"
+-- 开启鼠标支持 - 仅在normal 和 virtual mode下
+vim.o.mouse = "nv"
 -- 禁止创建备份文件
 vim.o.backup = false
 vim.o.writebackup = false
@@ -78,3 +78,14 @@ vim.o.list = false
 vim.o.shortmess = vim.o.shortmess .. 'c'
 
 TabnineEnable = true
+
+local function opts(desc)
+    return { desc = 'nvim: ' .. desc }
+end
+
+vim.keymap.set("n", "<C-j>t", "<cmd>ChatGPT<CR>", opts('Open ChatGPT'))
+vim.keymap.set("i", "<C-j>t", "<cmd>ChatGPT<CR>", opts('Open ChatGPT'))
+vim.keymap.set("n", "<C-j>c", "<cmd>ChatGPTCompleteCode<CR>", opts('CompleteCode by ChatGPT'))
+vim.keymap.set("i", "<C-j>c", "<cmd>ChatGPTCompleteCode<CR>", opts('CompleteCode by ChatGPT'))
+vim.keymap.set("n", "<C-j>r", ':ChatGPTRun -<tab>', opts('ChatGPTRun'))
+vim.keymap.set("v", "<C-j>r", ':ChatGPTRun -<tab>', opts('ChatGPTRun'))
