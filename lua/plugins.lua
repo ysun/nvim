@@ -142,6 +142,7 @@ use({
 })
 
 use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+use { 'github/copilot.vim' }
 
 -- These optional plugins should be loaded directly because of a bug in Packer lazy loading
 use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons

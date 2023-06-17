@@ -19,7 +19,8 @@ vim.wo.colorcolumn = "80"
 vim.bo.expandtab = false
 -- NORMAL 模式下 >> << 和 INSERT 模式下 CTRL-T CTRL-D 的缩进长度
 vim.o.shiftround = true
-vim.o.shiftwidth = 2
+-- 1 个 tab 移动 8 个空格
+vim.o.shiftwidth = 8
 -- 1 个 tab 显示为 8 个空格
 vim.o.tabstop = 8
 vim.bo.tabstop = 8
@@ -73,7 +74,7 @@ vim.o.termguicolors = true
 vim.opt.termguicolors = true
 -- 把空格显示成一个点
 vim.o.list = false
--- vim.o.listchars = "space:·"
+vim.o.listchars = "space:·"
 -- Dont' pass messages to |ins-completin menu|
 vim.o.shortmess = vim.o.shortmess .. 'c'
 
@@ -89,3 +90,10 @@ vim.keymap.set("n", "<C-j>c", "<cmd>ChatGPTCompleteCode<CR>", opts('CompleteCode
 vim.keymap.set("i", "<C-j>c", "<cmd>ChatGPTCompleteCode<CR>", opts('CompleteCode by ChatGPT'))
 vim.keymap.set("n", "<C-j>r", ':ChatGPTRun -<tab>', opts('ChatGPTRun'))
 vim.keymap.set("v", "<C-j>r", ':ChatGPTRun -<tab>', opts('ChatGPTRun'))
+
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-k>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
+-- vim.g.copilot_proxy = 'http://proxy-us.xxx.com:914'
+vim.g.copilot_proxy = os.getenv("http_proxy")
+vim.g.copilot_proxy_strict_ssl = false
