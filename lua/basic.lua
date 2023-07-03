@@ -78,6 +78,8 @@ vim.o.listchars = "space:·"
 -- Dont' pass messages to |ins-completin menu|
 vim.o.shortmess = vim.o.shortmess .. 'c'
 
+vim.g.ff = unix
+
 TabnineEnable = true
 
 local function opts(desc)
