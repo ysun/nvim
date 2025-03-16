@@ -40,7 +40,8 @@ packer.reset()
 -- actual plugins list
 use {'wbthomason/packer.nvim'}
 
-use {'folke/tokyonight.nvim', config = get_config("tokyonight")}
+-- https://github.com/folke/tokyonight.nvim/tree/main
+-- use {'folke/tokyonight.nvim', config = get_config("tokyonight")}
 
 use { "neovim/nvim-lspconfig", config = get_config("lsp") }
 
@@ -148,3 +149,13 @@ use { 'github/copilot.vim' }
 use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
 use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
 use 'romgrk/barbar.nvim'
+
+-- onedark theme
+-- use 'navarasu/onedark.nvim'
+-- https://github.com/navarasu/onedark.nvim
+require('onedark').setup {
+    style = 'darker', -- 默认主题风格，'deep' 'dark', 'darker', 等中选择
+    transparent = true,  -- 控制背景是否透明显示
+    term_colors = true,  -- 是否根据选定的主题改变终端颜色
+}
+require('onedark').load()

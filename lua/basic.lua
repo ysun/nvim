@@ -80,7 +80,7 @@ vim.o.shortmess = vim.o.shortmess .. 'c'
 
 vim.g.ff = unix
 
-TabnineEnable = true
+TabnineEnable = false
 
 local function opts(desc)
     return { desc = 'nvim: ' .. desc }
@@ -97,5 +97,7 @@ vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-k>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 -- vim.g.copilot_proxy = 'http://proxy-us.xxx.com:914'
-vim.g.copilot_proxy = os.getenv("http_proxy")
+vim.g.copilot_proxy = os.getenv("https_proxy")
 vim.g.copilot_proxy_strict_ssl = false
+
+-- vim.cmd [[colorscheme onedark]]
