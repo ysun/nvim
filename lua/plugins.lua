@@ -41,7 +41,7 @@ packer.reset()
 use {'wbthomason/packer.nvim'}
 
 -- https://github.com/folke/tokyonight.nvim/tree/main
--- use {'folke/tokyonight.nvim', config = get_config("tokyonight")}
+use {'folke/tokyonight.nvim', config = get_config("tokyonight")}
 
 use { "neovim/nvim-lspconfig", config = get_config("lsp") }
 
@@ -154,8 +154,8 @@ use 'romgrk/barbar.nvim'
 -- use 'navarasu/onedark.nvim'
 -- https://github.com/navarasu/onedark.nvim
 require('onedark').setup {
-    style = 'darker', -- 默认主题风格，'deep' 'dark', 'darker', 等中选择
-    transparent = true,  -- 控制背景是否透明显示
+    style = 'deep', -- 默认主题风格，'deep''darker''dark' 等中选择
+    transparent = false,  -- 控制背景是否透明显示
     term_colors = true,  -- 是否根据选定的主题改变终端颜色
 }
 require('onedark').load()

@@ -100,4 +100,5 @@ vim.api.nvim_set_keymap("i", "<C-k>", 'copilot#Accept("<CR>")', { silent = true,
 vim.g.copilot_proxy = os.getenv("https_proxy")
 vim.g.copilot_proxy_strict_ssl = false
 
+vim.cmd [[colorscheme tokyonight-night]]
 -- vim.cmd [[colorscheme onedark]]
